@@ -20,8 +20,18 @@ export class EventService {
   getEvent(id:number){
       return events.find(events=>events.id===id)
   }
+  saveEvent(event:any){
+    // console.log(formValues)
 
+    event.id=999
+    event.session=[]
+    events.push(event)
+
+
+  }
 }
+
+
 
 const  events :EventModel[]= [
   {

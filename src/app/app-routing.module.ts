@@ -10,6 +10,7 @@ import {
   EventListResolverService,
   LoginComponent
 } from './index'
+import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
 
 
 
@@ -29,6 +30,11 @@ const routes: Routes = [
     component: EventDetailsComponent,
     canActivate: [RouteActivatorService],
   },
+  {
+    path: 'events/session/new',
+    component: CreateSessionComponent
+  },
+  
   { path: '404', component: Error404Component },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/events', pathMatch: 'full' },

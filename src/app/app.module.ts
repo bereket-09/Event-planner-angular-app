@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { Error404Component } from './errors/404.component';
-
 import {
   EventsListComponent,
   EventThumbnailComponent,
@@ -12,6 +11,8 @@ import {
   CreateEventComponent
 } from './index';
 import { AuthService } from './services/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,14 @@ import { AuthService } from './services/auth.service';
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    Error404Component ],
+    Error404Component,
+    CreateSessionComponent ],
 
   imports: [
     BrowserModule, 
-    AppRoutingModule
+    AppRoutingModule,
+  ReactiveFormsModule,
+  FormsModule
   ],
   
   providers: [AuthService,
