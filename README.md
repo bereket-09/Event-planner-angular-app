@@ -1,2 +1,5 @@
-# angular-fundamentals-files
-This repo contains a few helper files for the Angular Fundamentals course at http://app.pluralsight.com/courses/angular-fundamentals
+Angular Event Planner App
+
+  ng serve 
+
+json-server --watch db.json for the backend server(TEST Server)
